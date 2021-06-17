@@ -1,0 +1,42 @@
+<%- contentFor('content') %>
+<nav class="navbar navbar-default">
+    <div class="container-fluid">
+        <div class="navbar-header">
+        <img class="img-responsive" style="width:80px;height:80px;" src="/image/logo.png"/>
+        </div>
+        <ul class="nav navbar-nav">
+        <li><a href="/">Home</a></li>
+        <li><a href="/about">About Me</a></li>
+        <li><a href="/projects">Projects</a></li>
+        <li><a href="/services">Services</a></li>
+        <li><a href="/contact">Contact</a></li>
+        <li class="active"><a href="/contacts">Contacts</a></li>                
+        </ul>
+    </div>
+</nav>
+<div class="container">
+    <h3><a href="/pages/contacts/create">Create Contact</a></h3>
+    <h1>Contact List</h1>
+    <% if(contacts.length>0) { %>
+    <table class="list-table">
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Mobile</th>
+          <th>Email</th>          
+        </tr>
+      </thead>
+      <tbody>
+        <% for(var i=0; i<contacts.length;i++) { %>
+          <tr>
+            <td><a href="/pages/contacts/show/<%= contacts[i]._id%>"><%= contacts[i].name%></a></td>
+            <td><%= contacts[i].mobile%></td>
+            <td><%= contacts[i].email%></td>
+          </tr>
+        <% } %>
+      </tbody>
+    </table>
+    <% } else { %>
+      <div>No contacts found.</div>
+    <% } %>
+  </div>

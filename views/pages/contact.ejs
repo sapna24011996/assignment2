@@ -1,0 +1,56 @@
+<%- contentFor('content') %>
+<nav class="navbar navbar-default">
+    <div class="container-fluid">
+        <div class="navbar-header">
+        <img class="img-responsive" style="width:80px;height:80px;" src="/image/logo.png"/>
+        </div>
+        <ul class="nav navbar-nav">
+        <li><a href="/">Home</a></li>
+        <li><a href="/about">About Me</a></li>
+        <li><a href="/projects">Projects</a></li>
+        <li><a href="/services">Services</a></li>
+        <li class="active"><a href="/contact">Contact</a></li>
+        <li><a href="/contacts">Contacts</a></li>                
+        </ul>
+    </div>
+</nav>    
+<h3>Contact</h3>
+<h4><b>Email: sapna24011996@gmail.com</b></h4>
+<form role="form" method="get" id="reused_form" action="/">
+    <div class="row">
+        <div class="col-sm-6 form-group">
+            <label for="name">
+                First Name:</label>
+            <input type="text" class="form-control" id="firstname" name="firstname" required>
+        </div>
+        <div class="col-sm-6 form-group">
+            <label for="name">
+                Last Name:</label>
+            <input type="text" class="form-control" id="lastname" name="lastname" required>
+        </div>                
+    </div>  
+    <div class="row">
+        <div class="col-sm-6 form-group">
+            <label for="name">
+                Contact Number:</label>
+            <input type="text" class="form-control" id="no" name="no" required>
+        </div>
+        <div class="col-sm-6 form-group">
+            <label for="email">
+                Email:</label>
+            <input type="email" class="form-control" id="email" name="email" required>
+        </div>               
+    </div>                
+    <div class="row">
+        <div class="col-sm-12 form-group">
+            <label for="message">
+                Message:</label>
+            <textarea class="form-control" type="textarea" id="message" name="message" maxlength="6000" rows="7"></textarea>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-12 form-group">
+            <button type="submit" class="btn btn-lg btn-default pull-right" >Send →</button>
+        </div>
+    </div>
+</form>

@@ -1,0 +1,41 @@
+<%- contentFor('content') %>
+<nav class="navbar navbar-default">
+    <div class="container-fluid">
+        <div class="navbar-header">
+        <img class="img-responsive" style="width:80px;height:80px;" src="/image/logo.png"/>
+        </div>
+        <ul class="nav navbar-nav">
+        <li><a href="/">Home</a></li>
+        <li><a href="/about">About Me</a></li>
+        <li><a href="/projects">Projects</a></li>
+        <li><a href="/services">Services</a></li>
+        <li><a href="/contact">Contact</a></li>
+        <li class="active"><a href="/contacts">Contacts</a></li>                
+        </ul>
+    </div>
+</nav>
+<div class="container">
+    <h3><a href="/pages/contacts">Contact List</a></h3>
+    <h1>Create New Contact</h1>
+    <form action="/pages/contacts/save" method="post">
+      <table>
+        <tbody>
+          <tr>
+            <td>Name</td>
+            <td><input type="text" name="name" /></td>
+          </tr>
+          <tr>
+            <td>Mobile</td>
+            <td><input type="text" name="mobile" /></td>
+          </tr>
+          <tr>
+            <td>Email</td>
+            <td><input type="text" name="email" /></td>
+          </tr>
+          <tr>
+            <td colspan="2"><button type="submit">Save</button></td>
+          </tr>
+        </tbody>
+      </table>
+    </form>
+  </div>

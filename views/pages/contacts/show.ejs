@@ -1,0 +1,43 @@
+<%- contentFor('content') %>
+<nav class="navbar navbar-default">
+    <div class="container-fluid">
+        <div class="navbar-header">
+        <img class="img-responsive" style="width:80px;height:80px;" src="/image/logo.png"/>
+        </div>
+        <ul class="nav navbar-nav">
+        <li><a href="/">Home</a></li>
+        <li><a href="/about">About Me</a></li>
+        <li><a href="/projects">Projects</a></li>
+        <li><a href="/services">Services</a></li>
+        <li><a href="/contact">Contact</a></li>
+        <li class="active"><a href="/contacts">Contacts</a></li>                
+        </ul>
+    </div>
+</nav>    
+<div class="container">
+    <h3><a href="/pages/contacts">Contact List</a></h3>
+    <h1>Contact Detail</h1>
+    <table>
+      <tbody>
+        <tr>
+          <td>Name</td>
+          <td>:</td>
+          <td><%= contact.name %></td>
+        </tr>
+        <tr>
+          <td>Mobile</td>
+          <td>:</td>
+          <td><%= contact.mobile %></td>
+        </tr>
+        <tr>
+          <td>Email</td>
+          <td>:</td>
+          <td><%= contact.email %></td>
+        </tr>
+      </tbody>
+    </table>
+    <h3><a href="/pages/contacts/edit/<%= contact._id%>">EDIT</a></h3>
+    <form action="/pages/contacts/delete/<%= contact._id%>" method="post">
+      <button type="submit">DELETE</button>
+    </form>
+  </div>
